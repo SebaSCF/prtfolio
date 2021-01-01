@@ -1,26 +1,41 @@
 import { NavLink } from "react-router-dom";
-import { SocialIcon } from 'react-social-icons';
 import React from 'react';
+import '../App.css';
 
-function Navbar() {
+
+export default function Navbar({ fixed }) {
+
+    const [navbarOpen, setNavbarOpen] = React.useState(false);
     return (
-        <header className="bg-blue-900">
-            <div className="container mx-auto flex justify-between">
-                <nav className="flex">
-                    <NavLink className="inflex-flex items-center text-white font-bold text-3xl py-5 px-3 mr-4 " to="/" exact>SebaSCF</NavLink>
-                    <NavLink className="inflex-flex items-center text-white font-medium py-7 px-3 mr-4 rounded hover:text-blue-200" activeClassName="text-white bg-blue-800" to="/" exact>Home</NavLink>
-                    <NavLink className="inflex-flex items-center text-white font-medium py-7 px-3 mr-4 rounded hover:text-blue-200" activeClassName="text-white bg-blue-800" to="/Projects">Projects</NavLink>
-                    <NavLink className="inflex-flex items-center text-white font-medium py-7 px-3 mr-4  roundedhover:text-blue-200" activeClassName="text-white bg-blue-800" to="/About">About</NavLink>
-                </nav>
+        <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-blue-900">
+        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
 
-            <div className="inflex-flex py-5 px-3">
-                <SocialIcon url="https://github.com/SebaSCF/prtfolio" className="mr-4" targer="_blank" network="instagram" bgColor="#000000" bgColor="#FFFFFF" />
-                <SocialIcon url="https://github.com/SebaSCF/prtfolio" className="mr-4" targer="_blank" network="github" bgColor="#000000" bgColor="#FFFFFF" />
-                <SocialIcon url="https://api.whatsapp.com/send?phone=18327087918&text=I%27m%20interested%20in%20your%20services,%20when%20are%20you%20available%20to%20talk%20about%20it?%20Looking%20forward%20for%20your%20response!" className="mr-4" targer="_blank" network="whatsapp" bgColor="#000000" bgColor="#FFFFFF" />
+                    <NavLink className="text-3xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white" to="/" exact>SebaSCF</NavLink>
+                    <button
+              className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block sm:hidden outline-none focus:outline-none"
+              type="button"
+              onClick={() => setNavbarOpen(!navbarOpen)}
+            >
+              <i class="fas fa-bars"></i>
+                    </button>
                 </div>
+                <div
+            className={
+              "lg:flex flex-grow items-center" +
+              (navbarOpen ? " flex" : " hidden")
+            }
+            id="example-navbar-danger"
+                >
+             <ul className="flex flex-col text-right sm:flex-row md:flex-row lg:flex-row justify-evenly list-none lg:ml-auto">
+             <li className="nav-item">   <NavLink className="inflex-flex items-center text-white font-medium text-xl mr-4 rounded hover:text-blue-200" activeClassName="opacity-50" to="/" exact>Home</NavLink></li>
+             <li className="nav-item">   <NavLink className="inflex-flex items-center text-white font-medium text-xl mr-4 rounded hover:text-blue-200" activeClassName="opacity-50" to="/Post">Posts</NavLink></li>
+             <li className="nav-item">  <NavLink className="inflex-flex items-center text-white font-medium text-xl mr-4  rounded hover:text-blue-200" activeClassName="opacity-50" to="/Project">Project</NavLink></li>
+             <li className="nav-item">   <NavLink className="inflex-flex items-center text-white font-medium text-xl mr-4  rounded hover:text-blue-200" activeClassName="opacity-50" to="/About">About</NavLink></li>
+                    </ul>
             </div>
-        </header>
+        </div>
+    </nav>
     )
 }
 
-export default Navbar;
