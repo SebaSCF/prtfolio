@@ -31,7 +31,7 @@ export default function Navbar({ fixed }) {
              <li className="nav-item">   <NavLink className="inflex-flex items-center text-white font-medium text-xl mr-4 rounded hover:text-blue-200" activeClassName="opacity-50" to="/" exact>Home</NavLink></li>
              <li className="nav-item">   <NavLink className="inflex-flex items-center text-white font-medium text-xl mr-4 rounded hover:text-blue-200" activeClassName="opacity-50" to="/Post">Posts</NavLink></li>
              <li className="nav-item">  <NavLink className="inflex-flex items-center text-white font-medium text-xl mr-4  rounded hover:text-blue-200" activeClassName="opacity-50" to="/Project">Project</NavLink></li>
-             <li className="nav-item">   <NavLink className="inflex-flex items-center text-white font-medium text-xl mr-4  rounded hover:text-blue-200" activeClassName="opacity-50" to="/About">About</NavLink></li>
+
                     </ul>
             </div>
         </div>

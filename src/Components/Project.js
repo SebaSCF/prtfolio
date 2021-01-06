@@ -1,5 +1,7 @@
 import React, {useState, useEffect  }from 'react';
 import sanityClient from "../client.js";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Project() {
     const [projectData, setProjectData] = useState(null);
@@ -17,6 +19,12 @@ function Project() {
             .catch(console.error);
     }, []);
 
+
+    useEffect(() => {
+        AOS.init({ duration: '1000'});
+    }, []);
+
+
     return (
         <main className= "bg-white min-h-screen p-12">
             <section className="container mx-auto">
@@ -26,7 +34,7 @@ function Project() {
                 <br />
                 <section className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projectData && projectData.map((Project,index) =>(
-                    <article className="relative rounded-lg shadow-2xl bg-white p-10 hover:opacity-75 pointer-events-auto">
+                    <article data-aos="flip-up" className="relative rounded-lg shadow-2xl bg-white p-10 hover:opacity-75 pointer-events-auto">
                         <h3 className="text-black text-4xl font-bold mb-2 hover:opacity-80">
                         <a href={Project.link} alt={Project.title} target="_blank" rel="noopener noreffer">{Project.title}</a></h3>
                         <div className="text-gray-500 text-sm space-x-4">
