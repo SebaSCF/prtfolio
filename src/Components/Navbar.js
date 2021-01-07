@@ -17,7 +17,7 @@ export default function Navbar({ fixed }) {
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              <i class="fas fa-bars"></i>
+              <i class="fa fa-bars" aria-hidden="true"></i>
                     </button>
                 </div>
                 <div
