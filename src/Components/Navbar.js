@@ -3,7 +3,7 @@ import React from 'react';
 import '../App.css';
 
 
-export default function Navbar({ fixed }) {
+export default function Navbar({}) {
 
     const [navbarOpen, setNavbarOpen] = React.useState(false);
     return (
@@ -27,7 +27,7 @@ export default function Navbar({ fixed }) {
             }
             id="example-navbar-danger"
                 >
-             <ul className="flex flex-col text-right sm:flex-row md:flex-row lg:flex-row justify-evenly list-none lg:ml-auto">
+             <ul className="flex flex-col text-left sm:flex-row md:flex-row lg:flex-row justify-evenly list-none lg:ml-auto">
              <li className="nav-item">   <NavLink className="inflex-flex items-center text-white font-medium text-xl mr-4 rounded hover:text-blue-200" activeClassName="opacity-50" to="/" exact>Home</NavLink></li>
              <li className="nav-item">   <NavLink className="inflex-flex items-center text-white font-medium text-xl mr-4 rounded hover:text-blue-200" activeClassName="opacity-50" to="/Post">Posts</NavLink></li>
              <li className="nav-item">  <NavLink className="inflex-flex items-center text-white font-medium text-xl mr-4  rounded hover:text-blue-200" activeClassName="opacity-50" to="/Project">Project</NavLink></li>
