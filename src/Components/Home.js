@@ -26,7 +26,7 @@ function Home() {
                 <h1 className="hdr bold leading-none sm:text-md md:text-md lg:leading-snug text-7xl home-name">Sebastian Cappadonna</h1>
                 <h4 className="sub-hdr text-3xl ">Front-End Developer, Video-Editor and Graphic Designer</h4>
                     <hr className ="my-4" />
-                <p className="m-2" data-aos="fade-up" data-aos-easing="ease-in-out">I am a Computer Information Systems major College Student, seeking to improve myself every day in these fields of work, in order to offer a variety of services regarding Websites, nice edited Videos, and Graphics. Thus, a company will be provided with a nice and detailed outlook. I have the skills to create what a business company needs to be attractive to the public and customers.</p>
+                <p className="m-2" data-aos="fade-up" data-aos-easing="ease-in-out">I am seeking to improve myself every day in these fields of work, in order to offer a variety of services regarding Websites, nice edited Videos, and Graphics. Thus, a company will be provided with a nice and detailed outlook. I have the skills to create what a business company needs to be attractive to the public and customers.</p>
                <b><p data-aos="fade-up" data-aos-easing="ease-in-out">Check Out My <u><b><NavLink to="/CV">Resume</NavLink></b></u> </p></b>
             </section>
             </div>
