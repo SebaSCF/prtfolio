@@ -37,15 +37,15 @@ function Project() {
                     <article data-aos="flip-up" className="relative rounded-lg shadow-2xl bg-white p-10 hover:opacity-75 pointer-events-auto">
                         <h3 className="text-black text-4xl font-bold mb-2 hover:opacity-80">
                         <a href={Project.link} alt={Project.title} target="_blank" rel="noopener noreffer">{Project.title}</a></h3>
-                        <div className="text-gray-500 text-sm space-x-4">
+                        <div className="text-gray-500 text-sm">
                             <span>
-                                <strong className="font-bold">Finished on</strong>:{" "}{new Date(Project.date).toLocaleDateString().toUpperCase()}
+                                <strong className="font-bold">Finished on</strong>:{" "}{new Date(Project.date).toLocaleDateString().toUpperCase()}<br />
                             </span>
                             <span>
-                                <strong className="font-bold">Location</strong>:{" "}{Project.place.toUpperCase()}
+                                <strong className="font-bold">Location</strong>:{" "}{Project.place.toUpperCase()}<br />
                             </span>
                             <span>
-                                <strong className="font-bold">Type</strong>:{" "}{Project.projectType.toUpperCase()}
+                                <strong className="font-bold">Type</strong>:{" "}{Project.projectType.toUpperCase()}<br />
                             </span>
                                 <p className="my-6 text-lg text-gray-700 leading-relaxed">{Project.description}</p>
                             </div>
