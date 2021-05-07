@@ -22,12 +22,12 @@ function Home() {
               <div><SocialIcon data-aos="flip-up" data-aos-delay="250" url="https://api.whatsapp.com/send?phone=18327087918&text=I%27m%20interested%20in%20your%20services,%20when%20are%20you%20available%20to%20talk%20about%20it?%20Looking%20forward%20for%20your%20response!" className="iconsSocial mr-4 hover:opacity-80" target="_blank" network="whatsapp" bgColor="#0733D8" /></div>
                 </div>
         </section>
-            <section data-aos="zoom-in-right" className="text-left m-14 relative content-center">
+            <section className="text-left m-14 relative content-center">
                 <h1 className="hdr bold leading-none sm:text-md md:text-md lg:leading-snug text-7xl home-name">Sebastian Cappadonna</h1>
                 <h4 className="sub-hdr text-3xl ">Front-End Developer, Video-Editor and Graphic Designer</h4>
                     <hr className ="my-4" />
-                <p className="m-2" data-aos="fade-up" data-aos-easing="ease-in-out">I am seeking to improve myself every day in these fields of work, in order to offer a variety of services regarding Websites, nice edited Videos, and Graphics. Thus, a company will be provided with a nice and detailed outlook. I have the skills to create what a business company needs to be attractive to the public and customers.</p>
-               <b><p data-aos="fade-up" data-aos-easing="ease-in-out">Check Out My <u><b><NavLink to="/CV">Resume</NavLink></b></u> </p></b>
+                <p className="m-2" >I am seeking to improve myself every day in these fields of work, in order to offer a variety of services regarding Websites, nice edited Videos, and Graphics. Thus, a company will be provided with a nice and detailed outlook. I have the skills to create what a business company needs to be attractive to the public and customers.</p>
+               <b><p>Check Out My <u><b><NavLink to="/CV">Resume</NavLink></b></u> </p></b>
             </section>
             </div>
         </section>
