@@ -42,7 +42,7 @@ function Project() {
                                 <strong className="font-bold">Finished on</strong>:{" "}{new Date(Project.date).toLocaleDateString().toUpperCase()}
                             </span>
                             <span>
-                                <strong className="font-bold">Company</strong>:{" "}{Project.place.toUpperCase()}
+                                <strong className="font-bold">Location</strong>:{" "}{Project.place.toUpperCase()}
                             </span>
                             <span>
                                 <strong className="font-bold">Type</strong>:{" "}{Project.projectType.toUpperCase()}
