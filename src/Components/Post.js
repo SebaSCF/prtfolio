@@ -48,7 +48,7 @@ function Post() {
                                     alt={post.mainImage.alt}
                                     className="w-full h-full rounded-r object-cover absolute" />
                                 <span className="block relative h-full flex justify-end item-end pr-4 pb-4">
-                                    <h3 className="text-white text-bold text-lg font bold px-3 py-4 bg-blue-900 rounded">{post.title}</h3>
+                                    <h1 className="text-white text-bold text-lg font bold px-3 py-4 bg-blue-900 rounded">{post.title}</h1>
                                 </span>
                             </span>
                         </Link>
