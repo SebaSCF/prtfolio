@@ -7,7 +7,7 @@ import Cv from "./Components/Cv";
 import React from 'react';
 import NavBar from "./Components/Navbar";
 import './App.css';
-import LowerNav from "./Components/LowerNav";
+
 
 function App() {
   return (
@@ -21,7 +21,6 @@ function App() {
           <Route component={Project} path="/Project" />
           <Route component={Cv} path="/CV"/>
         </Switch>
-        <LowerNav />
       </BrowserRouter>
     </div>
   );

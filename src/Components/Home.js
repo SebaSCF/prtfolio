@@ -5,7 +5,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../App.css';
-
+import Tooltip from '@material-ui/core/Tooltip';
 function Home() {
     useEffect(() => {
         AOS.init({ duration: '2000'});
@@ -17,10 +17,9 @@ function Home() {
                 <br />
                 <section className="bg-white">
             <div className="flex justify-center">
-              <div><SocialIcon data-aos="flip-up" data-aos-delay="50" url="https://www.instagram.com/sebascfsv/?hl=en" className="iconsSocial mr-4 hover:opacity-80" target="_blank" network="instagram" bgColor="#000000" bgColor="#0733D8" /></div>
-              <div><SocialIcon data-aos="flip-up" data-aos-delay="150" url="https://github.com/SebaSCF" className="iconsSocial mr-4 hover:opacity-80" target="_blank" network="github" bgColor="#000000" bgColor="#0733D8" /></div>
-              <div><SocialIcon data-aos="flip-up" data-aos-delay="250" url="https://api.whatsapp.com/send?phone=18327087918&text=I%27m%20interested%20in%20your%20services,%20when%20are%20you%20available%20to%20talk%20about%20it?%20Looking%20forward%20for%20your%20response!" className="iconsSocial mr-4 hover:opacity-80" target="_blank" network="whatsapp" bgColor="#0733D8" /></div>
-              <div><SocialIcon data-aos="flip-up" data-aos-delay="250" url="https://www.linkedin.com/in/sebastian-cappadonna-04aa04134/" className="iconsSocial mr-4 hover:opacity-80" target="_blank" network="linkedin" bgColor="#0733D8" /></div>
+              <Tooltip className="text-center" title="Instagram" placement="bottom"><div><SocialIcon data-aos="flip-up" data-aos-delay="50" url="https://www.instagram.com/sebascfsv/?hl=en" className="iconsSocial mr-4 hover:opacity-80" target="_blank" network="instagram" bgColor="#000000" bgColor="#0733D8" /></div></Tooltip>
+              <Tooltip className="text-center" title="Github" placement="bottom"><div><SocialIcon data-aos="flip-up" data-aos-delay="150" url="https://github.com/SebaSCF" className="iconsSocial mr-4 hover:opacity-80" target="_blank" network="github" bgColor="#000000" bgColor="#0733D8" /></div></Tooltip>
+              <Tooltip className="text-center" title="LinkedIn" placement="bottom"><div><SocialIcon data-aos="flip-up" data-aos-delay="250" url="https://www.linkedin.com/in/sebastian-cappadonna-04aa04134/" className="iconsSocial mr-4 hover:opacity-80" target="_blank" network="linkedin" bgColor="#0733D8" /></div></Tooltip>
                 </div>
         </section>
             <section className="text-left m-14 relative content-center">
