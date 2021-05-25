@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import React from 'react';
 import '../App.css';
-import Tooltip from '@material-ui/core/Tooltip';
+
 
 export default function Navbar({}) {
 
@@ -9,7 +9,7 @@ export default function Navbar({}) {
     return (
         <nav className="relative  flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-blue-900">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+          <div  className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
 
                     <NavLink className="text-3xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white" to="/" exact>SebaSCF</NavLink>
                     <button

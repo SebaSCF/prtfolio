@@ -6,6 +6,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../App.css';
 import Tooltip from '@material-ui/core/Tooltip';
+import Typical from 'react-typical';
 function Home() {
     useEffect(() => {
         AOS.init({ duration: '2000'});
@@ -23,8 +24,13 @@ function Home() {
                 </div>
         </section>
             <section className="text-left m-14 relative content-center">
+
                 <h1 className="hdr bold leading-none sm:text-md md:text-md lg:leading-snug text-7xl home-name">Sebastian Cappadonna</h1>
-                <h4 className="sub-hdr text-3xl ">Front-End Developer, Video-Editor and Graphic Designer</h4>
+                <Typical className="sub-hdr text-3xl "
+            steps={['Front-End Developer💻', 1800, 'Video-Editor📹', 1800, 'Graphic Designer🖌️', 1800]}
+         loop={Infinity}
+        wrapper="p"
+      / >
                     <hr className ="my-4" />
                 <p className="m-2" >I am seeking to improve myself every day in these fields of work, in order to offer a variety of services regarding Websites, nice edited Videos, and Graphics. Thus, a company will be provided with a nice and detailed outlook. I have the skills to create what a business company needs to be attractive to the public and customers.</p>
                <b><p>Check Out My <u><b><NavLink to="/CV">Resume</NavLink></b></u> </p></b>
