@@ -21,6 +21,7 @@ function Home() {
               <Tooltip className="text-center" title="Instagram" placement="bottom"><div><SocialIcon data-aos="flip-up" data-aos-delay="50" url="https://www.instagram.com/sebascfsv/?hl=en" className="iconsSocial mr-4 hover:opacity-80" target="_blank" network="instagram" bgColor="#000000" bgColor="#0733D8" /></div></Tooltip>
               <Tooltip className="text-center" title="Github" placement="bottom"><div><SocialIcon data-aos="flip-up" data-aos-delay="150" url="https://github.com/SebaSCF" className="iconsSocial mr-4 hover:opacity-80" target="_blank" network="github" bgColor="#000000" bgColor="#0733D8" /></div></Tooltip>
               <Tooltip className="text-center" title="LinkedIn" placement="bottom"><div><SocialIcon data-aos="flip-up" data-aos-delay="250" url="https://www.linkedin.com/in/sebastian-cappadonna-04aa04134/" className="iconsSocial mr-4 hover:opacity-80" target="_blank" network="linkedin" bgColor="#0733D8" /></div></Tooltip>
+              <Tooltip className="text-center" title="Behance" placement="bottom"><div><SocialIcon data-aos="flip-up" data-aos-delay="250" url="https://www.behance.net/sebasticappado" className="iconsSocial mr-4 hover:opacity-80" target="_blank" network="behance" bgColor="#0733D8" /></div></Tooltip>
                 </div>
         </section>
             <section className="text-left m-14 relative content-center">

@@ -36,6 +36,10 @@ export default {
             type: "url",
         },
         {
+            name: "Repository",
+            type: "string",
+        },
+        {
             name: "tags",
             type: "array",
             of: [

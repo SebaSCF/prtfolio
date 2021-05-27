@@ -14,6 +14,7 @@ function Project() {
             description,
             projectType,
             link,
+            Repository,
             tags
         }`).then((data) => setProjectData(data))
             .catch(console.error);
@@ -50,8 +51,12 @@ function Project() {
                                 <p className="my-6 text-lg text-gray-700 leading-relaxed">{Project.description}</p>
                             </div>
                             <a href={Project.link} target="_blank" rel="noopener noreffer" className="text-black text-xl font-bold hover:underline hover:opacity-80">
-                                View the Project
+                              <i class="fa fa-external-link mr-4 " aria-hidden="true"></i>View the Project
                                </a>
+                            <br />
+                            <a href={Project.Repository} target="_blank" rel="noopener noreffer" className="text-black text-xl font-bold hover:underline hover:opacity-80">
+                                <i class="fa fa-github mr-4 " aria-hidden="true"></i>GitHub Repository
+                                </a>
 
                         </article>
                         ))}
