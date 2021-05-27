@@ -22,6 +22,7 @@ function App() {
           <Route component={Cv} path="/CV"/>
         </Switch>
       </BrowserRouter>
+      <p className="text-center p-2">Developed with React⚛️</p>
     </div>
   );
 }
