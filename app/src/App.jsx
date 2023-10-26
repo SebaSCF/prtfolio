@@ -4,10 +4,8 @@ import Home from "./Components/Home";
 import Project from "./Components/Project";
 import SinglePost from "./Components/SinglePost";
 import Cv from "./Components/Cv";
-import React, { useEffect, useState } from "react";
-import NavBar from "./Components/Navbar";
+import { useEffect, useState } from "react";
 import "./App.css";
-import Three from "./Components/ThreeComponents/three";
 
 function App() {
   const [dimensions, setDimensions] = useState({
@@ -24,7 +22,7 @@ function App() {
 
     window.addEventListener("resize", handleResize);
 
-    return (_) => {
+    return () => {
       window.removeEventListener("resize", handleResize);
     };
   });
@@ -66,15 +64,7 @@ function App() {
             }
             path="/Project"
           />
-          <Route
-            element={
-              <div className="h-full">
-                <Three />
-              </div>
-            }
-            path="/Testing
-            "
-          />
+
           <Route
             element={
               <div className="h-full">
