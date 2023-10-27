@@ -4,14 +4,20 @@ import Home from "./Components/Home";
 import Project from "./Components/Project";
 import SinglePost from "./Components/SinglePost";
 import Cv from "./Components/Cv";
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import "./App.css";
+import Navbar from "./Components/Navbar";
+import Skills from "./Components/Skill";
+
+export const GlobalContext = createContext();
 
 function App() {
   const [dimensions, setDimensions] = useState({
     height: window.innerHeight,
     width: window.innerWidth,
   });
+  const [Page, setPage] = useState("Home");
+
   useEffect(() => {
     function handleResize() {
       setDimensions({
@@ -28,53 +34,64 @@ function App() {
   });
 
   return (
-    <div style={{ height: dimensions.height }}>
-      <BrowserRouter>
-        <Routes>
-          {/*  */}
-          <Route
-            element={
-              <div className="h-full">
-                <Home />
-              </div>
-            }
-            path="/"
-          />
-          <Route
-            element={
-              <div className="h-full">
-                <SinglePost />
-              </div>
-            }
-            path="/Post/:slug"
-          />
-          <Route
-            element={
-              <div className="h-full">
-                <Post />
-              </div>
-            }
-            path="/Post"
-          />
-          <Route
-            element={
-              <div className="h-full">
-                <Project />
-              </div>
-            }
-            path="/Project"
-          />
+    <div className="h-screen">
+      <GlobalContext.Provider value={{ setPage, Page, dimensions }}>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            {/*  */}
+            <Route
+              element={
+                <div className="h-full bg-white p-10">
+                  <Home />
+                </div>
+              }
+              path="/"
+            />
+            <Route
+              element={
+                <div className="h-full bg-white p-10">
+                  <Skills />
+                </div>
+              }
+              path="/Skills"
+            />
+            <Route
+              element={
+                <div className="h-full bg-white p-10">
+                  <SinglePost />
+                </div>
+              }
+              path="/Post/:slug"
+            />
+            <Route
+              element={
+                <div className="h-full bg-white p-10">
+                  <Post />
+                </div>
+              }
+              path="/Post"
+            />
+            <Route
+              element={
+                <div className="h-full bg-white p-10">
+                  <Project />
+                </div>
+              }
+              path="/Project"
+            />
 
-          <Route
-            element={
-              <div className="h-full">
-                <Cv />
-              </div>
-            }
-            path="/CV"
-          />
-        </Routes>
-      </BrowserRouter>
+            <Route
+              element={
+                <div className="h-full bg-white p-10">
+                  <Cv />
+                </div>
+              }
+              path="/CV"
+            />
+          </Routes>
+        </BrowserRouter>
+      </GlobalContext.Provider>
     </div>
   );
 }

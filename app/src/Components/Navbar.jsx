@@ -1,73 +1,103 @@
-import { NavLink } from "react-router-dom";
-import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "../App.css";
+import { Button, ButtonGroup } from "@nextui-org/react";
 
-export default function Navbar({}) {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+export default function Navbar() {
+  const navigate = useNavigate();
+  const location = useLocation();
   return (
-    <nav
-      style={{ position: "sticky", top: 0, zIndex: 5, backgroundColor:"#3D3D3D" }}
-      className="flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg "
+    <div
+      style={{
+        position: "fixed",
+        bottom: 20,
+        zIndex: 1005,
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+      }}
     >
-      <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-        <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-          <NavLink
-            className="text-3xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"
-            to="/"
-            exact
-          >
-            SebaSCF
-          </NavLink>
-          <button
-            className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block sm:visible md:visible lg:hidden outline-none focus:outline-none"
-            type="button"
-            onClick={() => setNavbarOpen(!navbarOpen)}
-          >
-            <i className="fa fa-bars" aria-hidden="true"></i>
-          </button>
-        </div>
-        <div
-          className={
-            "lg:flex flex-grow items-center" +
-            (navbarOpen ? " flex" : " hidden")
+      <ButtonGroup>
+        <Button
+          className="portfolio_button "
+          // isIconOnly={true}
+          style={{ backgroundColor: "#3d3d3d" }}
+          variant="solid"
+          startContent={
+            <i
+              style={{ fontSize: "15px" }}
+              className="fa fa-home"
+              aria-hidden="true"
+            ></i>
           }
-          id="example-navbar-danger"
+          onClick={() => navigate("/")}
+          size="md"
         >
-          <ul className="flex flex-col text-left sm:flex-row md:flex-row lg:flex-row justify-evenly list-none lg:ml-auto">
-            <li className="nav-item">
-              {" "}
-              <NavLink
-                className="inflex-flex items-center text-white font-medium text-xl mr-4 rounded hover:text-blue-200"
-                activeClassName="opacity-50"
-                to="/"
-                exact
-              >
-                <i className="fas text-white fa-home mr-3"></i>Home
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              {" "}
-              <NavLink
-                className="inflex-flex items-center text-white font-medium text-xl mr-4 rounded hover:text-blue-200"
-                activeClassName="opacity-50"
-                to="/Post"
-              >
-                <i className="fas text-white fa-book-open mr-3"></i>Posts
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              {" "}
-              <NavLink
-                className="inflex-flex items-center text-white font-medium text-xl mr-4  rounded hover:text-blue-200"
-                activeClassName="opacity-50"
-                to="/Project"
-              >
-                <i className="fas text-white fa-project-diagram mr-3"></i>Project
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+          Home
+        </Button>
+        <Button
+          className="portfolio_button "
+          // isIconOnly={true}
+          style={{
+            backgroundColor: location.pathname.includes("/Skills")
+              ? "#7e7575"
+              : "#3d3d3d",
+          }}
+          startContent={
+            <i
+              style={{ fontSize: "15px" }}
+              className="fa-solid fa-layer-group"
+              aria-hidden="true"
+            ></i>
+          }
+          onClick={() => navigate("/Skills")}
+          variant="solid"
+          size="md"
+        >
+          Skills
+        </Button>
+        <Button
+          className="portfolio_button "
+          // isIconOnly={true}
+          style={{
+            backgroundColor: location.pathname.includes("/Post")
+              ? "#7e7575"
+              : "#3d3d3d",
+          }}
+          variant="solid"
+          onClick={() => navigate("/Post")}
+          startContent={
+            <i
+              style={{ fontSize: "15px" }}
+              className="fa-brands fa-microblog"
+              aria-hidden="true"
+            ></i>
+          }
+          size="md"
+        >
+          Blog
+        </Button>
+
+        <Button
+          className="portfolio_button "
+          // isIconOnly={true}
+          style={{
+            backgroundColor: location.pathname.includes("/Project")
+              ? "#7e7575"
+              : "#3d3d3d",
+          }}
+          variant="solid"
+          onClick={() => navigate("/Project")}
+          startContent={
+            <i
+              style={{ fontSize: "15px" }}
+              className="fa-solid fa-briefcase"
+              aria-hidden="true"
+            ></i>
+          }
+          size="md"
+        >
+          Projects
+        </Button>
+      </ButtonGroup>
+    </div>
   );
 }

@@ -1,93 +1,26 @@
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 import HomeImg from "../SCFLOGOX1Z.png";
-import React, { useEffect, useState } from "react";
-import { Button, Tooltip } from "@nextui-org/react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../App.css";
-import Post from "./Post";
-import Project from "./Project";
-import Skills from "./Skill";
-// import Tooltip from '@material-ui/core/Tooltip';
-// import Typical from 'react-typical';
+import { Image } from "@nextui-org/react";
 function Home() {
-  const [Page, setPage] = useState("Home");
   useEffect(() => {
     AOS.init({ duration: "2000" });
   }, []);
+
   return (
     <div
       data-aos="zoom-in"
       className="p-20 h-full bg-white flex flex-col md:flex-row items-center justify-evenly w-full"
     >
-      {Page === "Home" && <Presentation />}
-      {Page === "Skills" && <Skills />}
-      {Page === "Blog" && <Post />}
-      {Page === "Projects" && <Project />}
-
-      <section className="flex p-10 w-full md:w-24 flex-row md:flex-col md:items-center h-3/6 justify-between">
-        <Tooltip placement="left" content="Home" color="foreground">
-          <Button
-            className="portfolio_button "
-            isIconOnly={true}
-            variant="shadow"
-            onClick={() => setPage("Home")}
-            size="lg"
-          >
-            <i
-              style={{ fontSize: "20px" }}
-              className="fa fa-home"
-              aria-hidden="true"
-            ></i>
-          </Button>
-        </Tooltip>
-        <Tooltip placement="left" content="Skills" color="foreground">
-          <Button
-            className="portfolio_button "
-            isIconOnly={true}
-            onClick={() => setPage("Skills")}
-            variant="shadow"
-            size="lg"
-          >
-            <i
-              style={{ fontSize: "20px" }}
-              className="fa-solid fa-layer-group"
-              aria-hidden="true"
-            ></i>
-          </Button>
-        </Tooltip>
-        <Tooltip placement="left" content="Posts" color="foreground">
-          <Button
-            className="portfolio_button "
-            isIconOnly={true}
-            variant="shadow"
-            onClick={() => setPage("Blog")}
-            size="lg"
-          >
-            <i
-              style={{ fontSize: "20px" }}
-              className="fa-brands fa-microblog"
-              aria-hidden="true"
-            ></i>
-          </Button>
-        </Tooltip>
-        <Tooltip placement="left" content="Work" color="foreground">
-          <Button
-            className="portfolio_button "
-            isIconOnly={true}
-            variant="shadow"
-            onClick={() => setPage("Projects")}
-            size="lg"
-          >
-            <i
-              style={{ fontSize: "20px" }}
-              className="fa-solid fa-briefcase"
-              aria-hidden="true"
-            ></i>
-          </Button>
-        </Tooltip>
-      </section>
+      <Presentation />
+      {/* {globalCont.Page === "Home" && <Presentation />}
+      {globalCont.Page === "Skills" && <Skills />}
+      {globalCont.Page === "Blog" && <Post />}
+      {globalCont.Page === "Projects" && <Project />} */}
     </div>
   );
 }
@@ -95,13 +28,22 @@ function Home() {
 export default Home;
 export const Presentation = () => {
   return (
-    <section className="p-20 h-full bg-white flex flex-col lg:flex-row items-center justify-evenly w-full">
+    <section className="lg:p-20 h-full bg-white flex flex-col lg:flex-row items-center justify-evenly w-full">
+      <Image
+        isBlurred={false}
+        width={440}
+        isZoomed={true}
+        src={HomeImg}
+        alt="HomeImage"
+        classNames="m-5"
+      />
+      {/*
       <img
         src={HomeImg}
         className="p-0 "
-        style={{ height: "400px", width: "400px" }}
+        style={{  width: "30%" }}
         alt="HomeImage"
-      />
+      /> */}
 
       <section className="text-left p-10">
         <h1
@@ -117,6 +59,7 @@ export const Presentation = () => {
         wrapper="p"
       / > */}
         <p className="m-2">Passionate about Web Development & Design</p>
+        {/* <b><p>Check Out My <u><b><NavLink to="/CV">Resume</NavLink></b></u> </p></b> */}
         {/* <p className="m-2">
           I am seeking to improve myself every day in these fields of work, in
           order to offer a variety of services regarding Websites, nice edited

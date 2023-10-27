@@ -35,14 +35,16 @@ function Project() {
     </div>
   ) : (
     <section data-aos="zoom-in">
-      <h1 className="text-6xl text=bold flex cursive">Projects</h1>
-      <h2 className="text-2xl flex mb-12">
-        Graphic Design, Video Editing and Front-End
-      </h2>
-      <hr />
+      <div  className="bg-white" style={{position:'sticky', top: 0, zIndex:1000}}>
+        <h1 className="text-6xl text=bold flex cursive">Projects</h1>
+        <h2 className="text-2xl flex mb-12">
+          Graphic Design, Video Editing and Front-End
+        </h2>
+        <hr />
+      </div>
       <br />
       <section
-        style={{ maxHeight: "500px", overflowY: "auto", overflowX: "hidden" }}
+        style={{ overflowY: "auto", overflowX: "hidden", maxHeight: "90%" }}
         className="grid w-full sm:grid-cols-1 md:grid-cols-2  gap-8 p-10"
       >
         {projectData &&

@@ -1,24 +1,28 @@
 import { Progress, Tooltip } from "antd";
-import React from "react";
 
 const Skills = () => {
-  return (
-    <div data-aos="zoom-in" className="w-full">
-      <h1 className="text-6xl text=bold flex cursive">Skills</h1>
 
+  return (
+    <div data-aos="zoom-in" className="w-full h-full">
+      <div
+        className="bg-white"
+        style={{ position: "sticky", top: 0, zIndex: 1000 }}
+      >
+        <h1 className="text-6xl text=bold flex cursive">Skills</h1>
+      </div>
       <hr />
       <section
-        style={{ maxHeight: "650px", overflowY: "auto", overflowX: "hidden" }}
-        className="p-20 h-full bg-white w-full grid grid-cols-1 lg:grid-cols-4  gap-5"
+        style={{ overflowY: "auto", overflowX: "auto", maxHeight: "90%" }}
+        className=" h-full bg-white w-full grid grid-cols-1 lg:grid-cols-6  gap-5"
       >
         <div
-          className="flex flex-col items-center p-10 border-1 rounded-md"
+          className="flex flex-col items-center justify-center p-10 border-1 rounded-md"
           style={{ borderColor: "#3d3d3d" }}
         >
           <Tooltip placement="top" title="HTML5">
             <div className="flex flex-col items-center justify-between ">
               <i
-                style={{ fontSize: "42px" }}
+                style={{ fontSize: "56px" }}
                 className="fa-brands fa-html5"
               ></i>{" "}
             </div>
@@ -33,13 +37,13 @@ const Skills = () => {
           </div>
         </div>
         <div
-          className="flex flex-col items-center p-10 border-1 rounded-md"
+          className="flex flex-col items-center justify-center p-10 border-1 rounded-md"
           style={{ borderColor: "#3d3d3d" }}
         >
           <Tooltip placement="top" title="CSS3">
             <div className="flex flex-col items-center justify-between ">
               <i
-                style={{ fontSize: "42px" }}
+                style={{ fontSize: "56px" }}
                 className="fa-brands fa-css3-alt"
               ></i>{" "}
             </div>
@@ -55,13 +59,13 @@ const Skills = () => {
           </div>
         </div>
         <div
-          className="flex flex-col items-center p-10 border-1 rounded-md"
+          className="flex flex-col items-center justify-center p-10 border-1 rounded-md"
           style={{ borderColor: "#3d3d3d" }}
         >
           <Tooltip placement="top" title="Javascript">
             <div className="flex flex-col items-center justify-between ">
               <i
-                style={{ fontSize: "42px" }}
+                style={{ fontSize: "56px" }}
                 className="fa-brands fa-square-js"
               ></i>{" "}
             </div>
@@ -77,7 +81,7 @@ const Skills = () => {
           </div>
         </div>
         <div
-          className="flex flex-col items-center p-10 border-1 rounded-md"
+          className="flex flex-col items-center justify-center p-10 border-1 rounded-md"
           style={{ borderColor: "#3d3d3d" }}
         >
           <Tooltip placement="top" title="Typescript">
@@ -100,13 +104,13 @@ const Skills = () => {
           </div>
         </div>
         <div
-          className="flex flex-col items-center p-10 border-1 rounded-md"
+          className="flex flex-col items-center justify-center p-10 border-1 rounded-md"
           style={{ borderColor: "#3d3d3d" }}
         >
           <Tooltip placement="top" title="React">
             <div className="flex flex-col items-center justify-between ">
               <i
-                style={{ fontSize: "42px" }}
+                style={{ fontSize: "56px" }}
                 className="fa-brands fa-react"
               ></i>{" "}
             </div>
@@ -122,12 +126,12 @@ const Skills = () => {
           </div>
         </div>
         <div
-          className="flex flex-col items-center p-10 border-1 rounded-md"
+          className="flex flex-col items-center justify-center p-10 border-1 rounded-md"
           style={{ borderColor: "#3d3d3d" }}
         >
           <Tooltip placement="top" title="Node.js">
             <div className="flex flex-col md:flex-row items-center justify-between ">
-              <i style={{ fontSize: "42px" }} className="fa-brands fa-node"></i>{" "}
+              <i style={{ fontSize: "56px" }} className="fa-brands fa-node"></i>{" "}
             </div>
           </Tooltip>
 
@@ -141,12 +145,12 @@ const Skills = () => {
           </div>
         </div>
         <div
-          className="flex flex-col items-center p-10 border-1 rounded-md"
+          className="flex flex-col items-center justify-center p-10 border-1 rounded-md"
           style={{ borderColor: "#3d3d3d" }}
         >
           <Tooltip placement="top" title="AWS">
             <div className="flex flex-col md:flex-row items-center justify-between ">
-              <i style={{ fontSize: "42px" }} className="fa-brands fa-aws"></i>{" "}
+              <i style={{ fontSize: "56px" }} className="fa-brands fa-aws"></i>{" "}
             </div>
           </Tooltip>
 
@@ -160,13 +164,13 @@ const Skills = () => {
           </div>
         </div>{" "}
         <div
-          className="flex flex-col items-center p-10 border-1 rounded-md"
+          className="flex flex-col items-center justify-center p-10 border-1 rounded-md"
           style={{ borderColor: "#3d3d3d" }}
         >
           <Tooltip placement="top" title="Git">
             <div className="flex flex-col md:flex-row items-center justify-between ">
               <i
-                style={{ fontSize: "42px" }}
+                style={{ fontSize: "56px" }}
                 className="fa-brands fa-git-alt"
               ></i>{" "}
             </div>

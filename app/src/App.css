@@ -33,8 +33,9 @@ switch {
 }
 
 .portfolio_button {
-  background-color: #3d3d3d !important;
+  /* background-color: #c2b5b5 !important; */
   color: #fff !important;
+  border: none !important;
 }
 
 @media (min-width: 320px) {
