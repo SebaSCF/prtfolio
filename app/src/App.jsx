@@ -43,9 +43,9 @@ function App() {
             {/*  */}
             <Route
               element={
-                <div className="h-full bg-white p-10">
+                // <div className="h-full bg-white p-10">
                   <Home />
-                </div>
+                // </div>
               }
               path="/"
             />
@@ -75,7 +75,7 @@ function App() {
             />
             <Route
               element={
-                <div className="h-full bg-white p-10">
+                <div className=" bg-white ">
                   <Project />
                 </div>
               }

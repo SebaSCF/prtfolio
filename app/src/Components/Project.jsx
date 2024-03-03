@@ -36,27 +36,35 @@ function Project() {
   ) : (
     <section data-aos="zoom-in">
       <div
-        className="bg-white"
+        className="bg-white p-10"
         style={{ position: "sticky", top: 0, zIndex: 1000 }}
       >
-        <h1 className="text-6xl text=bold flex cursive">Projects</h1>
-        <h2 className="text-2xl flex mb-12">
+        <h1
+          className="text-3xl md:text-4xl lg:text-6xl  flex cursive"
+          style={{ fontWeight: 800 }}
+        >
+          Projects
+        </h1>
+        <h2 className="text-lg md:text-xl lg:text-2xl flex mb-12">
           Graphic Design, Video Editing and Front-End
         </h2>
         <hr />
       </div>
-      <br />
       <section
-        style={{ overflowY: "auto", overflowX: "hidden"}}
-        className="grid w-full sm:grid-cols-1 md:grid-cols-2  gap-8 p-10"
+        style={{
+          overflowY: "auto",
+          overflowX: "hidden",
+          backgroundColor: "#ededed",
+        }}
+        className="grid sm:grid-cols-1 md:grid-cols-3 xl:grid-cols-4  gap-8 p-4"
       >
         {projectData &&
           projectData.map((Project, index) => (
             <article
               key={index}
-              className="relative  rounded-lg shadow-2xl bg-white p-10 hover:opacity-75 pointer-events-auto"
+              className="  rounded-lg shadow-md bg-white p-10 hover:opacity-75 pointer-events-auto"
             >
-              <h3 className="text-black text-4xl font-bold mb-2 hover:opacity-80">
+              <h3 className="text-black text-md md:text-lg lg:text-2xl font-bold mb-2 hover:opacity-80">
                 <a
                   href={Project.link}
                   alt={Project.title}
@@ -67,7 +75,7 @@ function Project() {
                   {Project.title}
                 </a>
               </h3>
-              <div className="text-gray-500 text-sm">
+              <div className="text-gray-500 text-xs md:text-md   ">
                 <span>
                   <strong className="font-bold">Finished on</strong>:{" "}
                   {new Date(Project.date).toLocaleDateString().toUpperCase()}
@@ -83,7 +91,7 @@ function Project() {
                   {Project.projectType.toUpperCase()}
                   <br />
                 </span>
-                <p className="my-6 text-lg text-gray-700 leading-relaxed">
+                <p className="my-6  text-xs md:text-md  text-gray-700 leading-relaxed">
                   {Project.description}
                 </p>
               </div>
@@ -91,7 +99,7 @@ function Project() {
                 href={Project.link}
                 target="_blank"
                 rel="noreferrer"
-                className="text-black text-xl font-bold hover:underline hover:opacity-80"
+                className="text-black text-lg md:text-md font-bold hover:underline hover:opacity-80"
               >
                 <i className="fa fa-external-link mr-4 " aria-hidden="true"></i>
                 View the Project
@@ -101,7 +109,7 @@ function Project() {
                 href={Project.Repository}
                 target="_blank"
                 rel="noreferrer"
-                className="text-black text-xl font-bold hover:underline hover:opacity-80"
+                className="text-black text-lg md:text-md font-bold hover:underline hover:opacity-80"
               >
                 <i className="fa fa-github mr-4 " aria-hidden="true"></i>
                 GitHub Repository
