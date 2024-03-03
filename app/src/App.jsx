@@ -7,7 +7,8 @@ import Cv from "./Components/Cv";
 import { createContext, useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar";
-import Skills from "./Components/Skill";
+
+import Experience from "./Components/Experience";
 
 export const GlobalContext = createContext();
 
@@ -51,10 +52,10 @@ function App() {
             <Route
               element={
                 <div className="h-full bg-white p-10">
-                  <Skills />
+                  <Experience />
                 </div>
               }
-              path="/Skills"
+              path="/Experience"
             />
             <Route
               element={

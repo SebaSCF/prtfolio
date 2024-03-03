@@ -1,6 +1,7 @@
 // import { NavLink } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 import HomeImg from "../SCFLOGOX1Z.png";
+import { Tooltip } from "antd";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -45,7 +46,114 @@ export const Presentation = () => {
         alt="HomeImage"
       /> */}
 
-      <section className="text-left p-10">
+      <section className="text-left p-10 grid grid-cols-1">
+        <div className=" bg-white w-full flex flex-row items-center justify-between">
+          <div
+            className="flex flex-col items-center justify-center "
+            style={{ borderColor: "#3d3d3d" }}
+          >
+            <Tooltip placement="top" title="HTML5">
+              <div className="flex flex-col items-center justify-between "  data-aos="flip-up">
+                <i
+                  style={{ fontSize: "35px" }}
+                  className="fa-brands fa-html5"
+                ></i>{" "}
+              </div>
+            </Tooltip>
+          </div>
+          <div
+            className="flex flex-col items-center justify-center "
+            style={{ borderColor: "#3d3d3d" }}
+          >
+            <Tooltip placement="top" title="CSS3">
+              <div className="flex flex-col items-center justify-between "  data-aos="flip-up">
+                <i
+                  style={{ fontSize: "35px" }}
+                  className="fa-brands fa-css3-alt"
+                ></i>{" "}
+              </div>
+            </Tooltip>
+          </div>
+          <div
+            className="flex flex-col items-center justify-center "
+            style={{ borderColor: "#3d3d3d" }}
+          >
+            <Tooltip placement="top" title="Javascript">
+              <div className="flex flex-col items-center justify-between "  data-aos="flip-up">
+                <i
+                  style={{ fontSize: "35px" }}
+                  className="fa-brands fa-square-js"
+                ></i>{" "}
+              </div>
+            </Tooltip>
+          </div>
+          <div
+            className="flex flex-col items-center justify-center "
+            style={{ borderColor: "#3d3d3d" }}
+          >
+            <Tooltip placement="top" title="Typescript">
+              <div className="flex flex-col items-center justify-between "  data-aos="flip-up">
+                <img
+                  src="https://imgs.search.brave.com/xlj3KJySz1N-9b8-JMMaMcB7QKH_UydJ8iuJy_SCuEQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9yYXcu/Z2l0aHVidXNlcmNv/bnRlbnQuY29tL2Zp/bGUtaWNvbnMvaWNv/bnMvbWFzdGVyL3N2/Zy9UeXBlU2NyaXB0/LnN2Zw.svg"
+                  alt="https://imgs.search.brave.com/xlj3KJySz1N-9b8-JMMaMcB7QKH_UydJ8iuJy_SCuEQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9yYXcu/Z2l0aHVidXNlcmNv/bnRlbnQuY29tL2Zp/bGUtaWNvbnMvaWNv/bnMvbWFzdGVyL3N2/Zy9UeXBlU2NyaXB0/LnN2Zw.svg"
+                  style={{ width: "32px", height: "32px" }}
+                />
+              </div>
+            </Tooltip>
+          </div>
+          <div
+            className="flex flex-col items-center justify-center "
+            style={{ borderColor: "#3d3d3d" }}
+          >
+            <Tooltip placement="top" title="React">
+              <div className="flex flex-col items-center justify-between "  data-aos="flip-up">
+                <i
+                  style={{ fontSize: "35px" }}
+                  className="fa-brands fa-react"
+                ></i>{" "}
+              </div>
+            </Tooltip>
+          </div>
+          <div
+            className="flex flex-col items-center justify-center "
+            style={{ borderColor: "#3d3d3d" }}
+          >
+            <Tooltip placement="top" title="Node.js">
+              <div className="flex flex-col md:flex-row items-center justify-between "  data-aos="flip-up">
+                <i
+                  style={{ fontSize: "35px" }}
+                  className="fa-brands fa-node"
+                ></i>{" "}
+              </div>
+            </Tooltip>
+          </div>
+          <div
+            className="flex flex-col items-center justify-center "
+            style={{ borderColor: "#3d3d3d" }}
+          >
+            <Tooltip placement="top" title="AWS">
+              <div className="flex flex-col md:flex-row items-center justify-between "  data-aos="flip-up">
+                <i
+                  style={{ fontSize: "35px" }}
+                  className="fa-brands fa-aws"
+                ></i>{" "}
+              </div>
+            </Tooltip>
+          </div>{" "}
+          <div
+            className="flex flex-col items-center justify-center "
+            style={{ borderColor: "#3d3d3d" }}
+          >
+            <Tooltip placement="top" title="Git">
+              <div className="flex flex-col md:flex-row items-center justify-between "  data-aos="flip-up">
+                <i
+                  style={{ fontSize: "35px" }}
+                  className="fa-brands fa-git-alt"
+                ></i>{" "}
+              </div>
+            </Tooltip>
+          </div>
+        </div>
         <h1
           data-aos="fade-down"
           className="hdr leading-none text-md md:text-md lg:text-7xl home-name"

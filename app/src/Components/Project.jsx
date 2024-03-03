@@ -35,7 +35,10 @@ function Project() {
     </div>
   ) : (
     <section data-aos="zoom-in">
-      <div  className="bg-white" style={{position:'sticky', top: 0, zIndex:1000}}>
+      <div
+        className="bg-white"
+        style={{ position: "sticky", top: 0, zIndex: 1000 }}
+      >
         <h1 className="text-6xl text=bold flex cursive">Projects</h1>
         <h2 className="text-2xl flex mb-12">
           Graphic Design, Video Editing and Front-End
@@ -44,7 +47,7 @@ function Project() {
       </div>
       <br />
       <section
-        style={{ overflowY: "auto", overflowX: "hidden", maxHeight: "90%" }}
+        style={{ overflowY: "auto", overflowX: "hidden"}}
         className="grid w-full sm:grid-cols-1 md:grid-cols-2  gap-8 p-10"
       >
         {projectData &&

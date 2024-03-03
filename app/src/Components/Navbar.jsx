@@ -37,7 +37,7 @@ export default function Navbar() {
           className="portfolio_button "
           // isIconOnly={true}
           style={{
-            backgroundColor: location.pathname.includes("/Skills")
+            backgroundColor: location.pathname.includes("/Experience")
               ? "#7e7575"
               : "#3d3d3d",
           }}
@@ -48,11 +48,11 @@ export default function Navbar() {
               aria-hidden="true"
             ></i>
           }
-          onClick={() => navigate("/Skills")}
+          onClick={() => navigate("/Experience")}
           variant="solid"
           size="md"
         >
-          Skills
+          Experience
         </Button>
         <Button
           className="portfolio_button "
