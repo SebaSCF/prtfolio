@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import "../App.css";
-import CV from "./Cv.pdf";
+// import CV from "./Cv.pdf";
 import {
   Popover,
   PopoverTrigger,
@@ -109,7 +109,7 @@ export default function Navbar() {
             >
               Projects
             </Button>
-            <Button
+            {/* <Button
               className="portfolio_button "
               // isIconOnly={true}
               style={{
@@ -133,7 +133,7 @@ export default function Navbar() {
               >
                 Curriculum
               </a>
-            </Button>
+            </Button> */}
           </>
         ) : (
           <Button
@@ -197,7 +197,7 @@ export default function Navbar() {
                   >
                     Projects
                   </Button>
-                  <Button
+                  {/* <Button
                     // isIconOnly={true}
                     variant="flat"
                     startContent={
@@ -217,7 +217,7 @@ export default function Navbar() {
                     >
                       Curriculum
                     </a>
-                  </Button>
+                  </Button> */}
                 </div>
               </PopoverContent>
             </Popover>
