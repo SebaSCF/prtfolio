@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import "../App.css";
 import { Button, ButtonGroup } from "@nextui-org/react";
-
+import CV from './Cv.pdf'
 export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -96,6 +96,31 @@ export default function Navbar() {
           size="md"
         >
           Projects
+        </Button>
+        <Button
+          className="portfolio_button "
+          // isIconOnly={true}
+          style={{
+            backgroundColor: "#0733D8",
+          }}
+          variant="solid"
+          startContent={
+            <i
+              style={{ fontSize: "15px" }}
+              className="fa-solid fa-file-pdf"
+              aria-hidden="true"
+            ></i>
+          }
+          size="md"
+        >
+          <a
+            href={CV}
+            download="Sebastian Cappadona_CV"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Curriculum
+          </a>
         </Button>
       </ButtonGroup>
     </div>
